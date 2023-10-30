@@ -25,8 +25,11 @@
             <div class="container">
                 <a class="navbar-brand" href={% url "Inicio" %}>Inicio</a>
                 <a class="btn btn-primary" href={% url "Televisores" %}>Televisores</a>
+                <a class="btn btn-primary" href={% url "add_televisor" %}>Añadir Televisor</a>
                 <a class="navbar-brand" href={% url "Notebooks" %}>Notebooks</a>
+                <a class="btn btn-primary" href={% url "add_notebook" %}>Añadir Notebook</a>
                 <a class="btn btn-primary" href={% url "Celulares" %}>Celulares</a>
+                <a class="btn btn-primary" href={% url "add_celular" %}>Añadir Celular</a>
             </div>
         </nav>
         <!-- Masthead-->
@@ -49,6 +52,7 @@
                             <!-- to get an API token!-->
                             <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
                                 <!-- Email address input-->
+                                {% block form2 %}
                                 <div class="row">
                                     <div class="col">
                                         <input class="form-control form-control-lg" id="emailAddress" type="email" placeholder="Email Address" data-sb-validations="required,email" />
@@ -57,6 +61,7 @@
                                     </div>
                                     <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Submit</button></div>
                                 </div>
+                                {% endblock form2 %}
                                 <!-- Submit success message-->
                                 <!---->
                                 <!-- This is what your users will see when the form-->
@@ -79,6 +84,9 @@
                 </div>
             </div>
         </header>
+        <main>
+            {% block main %}{% endblock main %}
+        </main>
         <!-- Icons Grid-->
         <section class="features-icons bg-light text-center">
             <div class="container">

@@ -6,3 +6,20 @@
 {% block h1 %}
 <h1>Notebooks!</h1>
 {% endblock h1 %}
+
+{% block main %}
+<form action="">
+    <input type="text" name="marca" placeholder="Notebooks...">
+    <input type="submit" value="Buscar">
+</form>
+
+{% if lista_de_note %}
+<ul>
+    {% for notebooks in lista_de_note %}
+    <li>{{notebooks}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se encontro la marca</p>
+{% endif %}
+{% endblock main %}

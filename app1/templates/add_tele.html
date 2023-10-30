@@ -1,0 +1,17 @@
+{% extends "paginabase.html" %}
+{% block title %}
+ <title>Add Televisores</title>
+{% endblock title %}
+
+{% block h1 %}
+ <h1>Añadir Televisor!</h1>
+{% endblock h1 %}
+
+
+{% block main %}
+<form action="" method="POST">
+   {% csrf_token %}
+   {{formulario}}
+   <input type="submit" value="Crear">
+</form>
+{% endblock main %}

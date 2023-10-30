@@ -7,3 +7,21 @@
 {% block h1 %}
   <h1>Televisores!</h1>
 {% endblock h1 %}
+
+
+{% block main %}
+<form action="">
+    <input type="text" name="marca" placeholder="Televisores...">
+    <input type="submit" value="Buscar">
+</form>
+
+{% if lista_de_tele %}
+<ul>
+    {% for televisor in lista_de_tele %}
+    <li>{{televisor}}</li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No se encontro la marca</p>
+{% endif %}
+{% endblock main %}
