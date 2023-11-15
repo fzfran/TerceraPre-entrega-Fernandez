@@ -1,0 +1,17 @@
+{% extends "paginabase.html" %}
+{% block title %}
+ <title>Actualizar Celular</title>
+{% endblock title %}
+
+{% block h1 %}
+ <h1>Actualizar celular!</h1>
+{% endblock h1 %}
+
+
+{% block main %}
+<form action="" method="POST">
+   {% csrf_token %}
+   {{formulario}}
+   <input type="submit" value="Actualizar">
+</form>
+{% endblock main %}

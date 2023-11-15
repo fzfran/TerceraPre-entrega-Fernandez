@@ -1,0 +1,17 @@
+{% extends "paginabase.html" %}
+{% block title %}
+ <title>Añadir Perifericos</title>
+{% endblock title %}
+
+{% block h1 %}
+ <h1>Perifericos!</h1>
+{% endblock h1 %}
+
+
+{% block main %}
+<form action="" method="POST">
+   {% csrf_token %}
+   {{form}}
+   <input type="submit" value="Crear">
+</form>
+{% endblock main %}

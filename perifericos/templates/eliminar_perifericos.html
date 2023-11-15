@@ -1,0 +1,17 @@
+{% extends "paginabase.html" %}
+{% block title %}
+ <title>Eliminar Perifericos</title>
+{% endblock title %}
+
+{% block h1 %}
+ <h1>Eliminar Periferico!</h1>
+{% endblock h1 %}
+
+
+{% block main %}
+<form action="" method="POST">
+   {% csrf_token %}
+   Desea eliminar este Periferico {{periferico.marca}} - {{periferico.modelo}} ?
+   <input type="submit" value="Eliminar">
+</form>
+{% endblock main %}

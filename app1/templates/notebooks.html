@@ -8,6 +8,10 @@
 {% endblock h1 %}
 
 {% block main %}
+<p>
+    <a href="{% url "add_notebook" %}">Añadir Notebook</a>
+</p>
+
 <form action="">
     <input type="text" name="marca" placeholder="Notebooks...">
     <input type="submit" value="Buscar">

@@ -1,0 +1,18 @@
+{% extends "paginabase.html" %}
+{% block title %}
+ <title>Celular {{celular.marca}}</title>
+{% endblock title %}
+
+{% block h1 %}
+ <h1>Celular {{celular.marca}}!</h1>
+{% endblock h1 %}
+
+
+{% block main %}
+<ul>
+    <li>Marca: {{celular.marca}}</li>
+    <li>Modelo: {{celular.modelo}}</li>
+    <li>Descripción: {{celular.descripcion}}</li>
+    <li>Fecha de Lanzamiento: {{celular.fecha_de_creacion}}</li>
+</ul>
+{% endblock main %}

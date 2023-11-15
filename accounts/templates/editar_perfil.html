@@ -1,0 +1,24 @@
+{% extends "paginabase.html" %}
+{% block title %}
+ <title>Editar Datos</title>
+{% endblock title %}
+
+{% block h1 %}
+{% if request.user.datosextra.avatar %}
+<div><img src="{{request.user.datosextra.avatar.url}}" alt="Foto de Perfil" height='200px'></div>
+{% endif %}
+ <h1>Bienvenido {{request.user.username}}</h1>
+{% endblock h1 %}
+
+
+{% block main %}
+<h2>Editar Perfil</h2>
+<form action={% url "editar_perfil" %} method="POST" enctype='multipart/form-data'>
+   {% csrf_token %}
+   <table>
+   {{formulario}}
+   </table>
+   <input type="submit" value="Editar Perfil">
+</form>
+<a href="{% url "cambiar_password" %}">Cambiar Contraseña</a>
+{% endblock main %}

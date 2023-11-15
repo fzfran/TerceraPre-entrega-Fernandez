@@ -1,0 +1,17 @@
+{% extends "paginabase.html" %}
+{% block title %}
+ <title>Periferico {{periferico.marca}}</title>
+{% endblock title %}
+
+{% block h1 %}
+ <h1>Periferico {{periferico.modelo}}!</h1>
+{% endblock h1 %}
+
+
+{% block main %}
+<ul>
+    <li>Marca: {{periferico.marca}}</li>
+    <li>Modelo: {{periferico.modelo}}</li>
+    <li>Fecha de Lanzamiento: {{periferico.fecha_de_creacion}}</li>
+</ul>
+{% endblock main %}
