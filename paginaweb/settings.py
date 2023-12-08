@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'app1',
     'perifericos',
-    'accounts'
+    'accounts',
+    'ckeditor',
 ]
 
 MIDDLEWARE = [

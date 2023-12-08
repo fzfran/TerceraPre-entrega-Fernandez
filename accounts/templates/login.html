@@ -9,7 +9,7 @@
 
 
 {% block main %}
-<form action={% url "login" %} method="POST">
+<form class="form.login" action={% url "login" %} method="POST">
    {% csrf_token %}
    <table>
    {{form}}

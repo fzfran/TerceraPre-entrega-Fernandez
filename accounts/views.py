@@ -38,6 +38,10 @@ def registro(request):
     
     return render(request, 'registro.html', { 'form' : formulario })
 
+def perfil(request):
+    datos_extra = request.user.datosextra
+    return render(request, 'perfil.html', {'biografia': datos_extra.biografia})
+
 def editar_perfil(request):
     
     datos_extra = request.user.datosextra
@@ -64,7 +68,7 @@ def editar_perfil(request):
             return redirect('editar_perfil')
             
      
-    return render(request, 'editar_perfil.html', { 'formulario' : formulario })
+    return render(request, 'editar_perfil.html', { 'formulario' : formulario },)
 
 class CambiarPassword(PasswordChangeView):
     template_name = 'cambiar_password.html'
